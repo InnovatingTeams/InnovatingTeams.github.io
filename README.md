@@ -1,14 +1,10 @@
-# Your readme
-
-Edit docs/README.tmpl.md. That is used to generate both the website's readme page and the root directory's README.md.
-
-# InnovatingTeams  
+# InnovatingTeams
 
 > Effective teams in 5000 person organizations
 
 ## Getting Started
 
-See the main website at <https://github.com/InnovatingTeams/InnovatingTeams.github.io/>.
+See the main website at <http://www.InnovatingTeams.com/>.
 
 ## Contributing
 
