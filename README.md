@@ -71,7 +71,7 @@ Deploy to gh-pages in your fork and then look online:
 
 	grunt deploy
 
-Point your browser at <https://username.github.io/InnovatingTeams.github.io/>.
+Point your browser at <http://username.github.io/InnovatingTeams.github.io/>.
 
 ### How to: submit your pull request
 
