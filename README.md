@@ -56,14 +56,22 @@ This will build the entire site into your `_gh_pages` directory.
 
 ### How to: seeing your changes
 
-Deploy to gh-pages in your fork, and then look online:
+For a purely local experience you can run a local web server. Serve the `_gh_pages` folder from your local git repo. The site is just static HTML so any web server can handle it.
+
+Alternatively, you can deploy to your GitHub repo and have it served via `_gh_pages`. This requires one-time setup. The same setup is required if you want to deploy the site to live (shipping to live also requires that you be in the owners group for the live repo).
+
+One-tme setup:
+
+	cd gh_pages
+	git init
+	git remote add origin https://github.com/username/InnovatingTeams.github.io.git
+	git remote add upstream https://github.com/InnovatingTeams/InnovatingTeams.github.io.git
+
+Deploy to gh-pages in your fork and then look online:
 
 	grunt deploy
-	git push gh_pages
 
-Point your browser at <https://username.github.io/Product.github.io/>.
-
-Alternatively, you can run a local web server. Serve the _gh_pages folder from your local git repo. The site is just static HTML so any web server can handle it.
+Point your browser at <https://username.github.io/InnovatingTeams.github.io/>.
 
 ### How to: submit your pull request
 
@@ -75,13 +83,13 @@ The community will drop by once you have submitted your pull request. We'll hold
 
 ## License
 
-Copyright (c) 2014 Arlo Belshee
+Copyright &copy; 2015 Innovating Teams
 
-This work is licensed under a [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png) Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). All source code is licensed under the [MIT license](LICENSE-MIT).
+This readme is licensed under a [![Creative Commons License](https://i.creativecommons.org/l/by/4.0/88x31.png) Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/). Website build and display source code (excluding content or any tools or applications published to this site under separate license) is licensed under the [MIT license](https://spdx.org/licenses/MIT#licenseText). Each page of the website is licensed separately; see the footer of each page for its licensing information.
 
 ---
 
-Project created by [Arlo Belshee](https://github.com/arlobelshee).
+Project created by [Innovating Teams](https://github.com/InnovatingTeams).
 
 [issues]: https://github.com/InnovatingTeams/InnovatingTeams.github.io/issues "Current open problems"
 [new-issue]: https://github.com/InnovatingTeams/InnovatingTeams.github.io/issues/new "Raise a new open problem"

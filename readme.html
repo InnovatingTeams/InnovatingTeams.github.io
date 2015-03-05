@@ -104,7 +104,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<div class="container bs-docs-container" id="content">
 		<div class="wordcount">
 			<div class="wordcount-display">
-				<span class="label-wordcount" data-wordcount="693">693&nbsp;words</span>,
+				<span class="label-wordcount" data-wordcount="793">793&nbsp;words</span>,
 				<span class="label-reading-time" data-reading-time="3 min">3 min&nbsp;to read</span>
 			</div>
 			
@@ -172,11 +172,16 @@ grunt install &amp;&amp; bower install</code></pre>
   <span class="anchor-target" id="how-to-seeing-your-changes"></span>
   <span class="glyphicon glyphicon-link"></span>
 </a></h3>
-<p>Deploy to gh-pages in your fork, and then look online:</p>
-<pre><code>grunt deploy
-git push gh_pages</code></pre>
-<p>Point your browser at <a href="https://username.github.io/Product.github.io/">https://username.github.io/Product.github.io/</a>.</p>
-<p>Alternatively, you can run a local web server. Serve the _gh_pages folder from your local git repo. The site is just static HTML so any web server can handle it.</p>
+<p>For a purely local experience you can run a local web server. Serve the <code>_gh_pages</code> folder from your local git repo. The site is just static HTML so any web server can handle it.</p>
+<p>Alternatively, you can deploy to your GitHub repo and have it served via <code>_gh_pages</code>. This requires one-time setup. The same setup is required if you want to deploy the site to live (shipping to live also requires that you be in the owners group for the live repo).</p>
+<p>One-tme setup:</p>
+<pre><code>cd gh_pages
+git init
+git remote add origin https://github.com/username/InnovatingTeams.github.io.git
+git remote add upstream https://github.com/InnovatingTeams/InnovatingTeams.github.io.git</code></pre>
+<p>Deploy to gh-pages in your fork and then look online:</p>
+<pre><code>grunt deploy</code></pre>
+<p>Point your browser at <a href="https://username.github.io/InnovatingTeams.github.io/">https://username.github.io/InnovatingTeams.github.io/</a>.</p>
 <h3 class="docs-heading">How to: submit your pull request<a href="#how-to-submit-your-pull-request" name="how-to-submit-your-pull-request" class="anchor">
   <span class="anchor-target" id="how-to-submit-your-pull-request"></span>
   <span class="glyphicon glyphicon-link"></span>
@@ -188,10 +193,10 @@ git push gh_pages</code></pre>
   <span class="anchor-target" id="license"></span>
   <span class="glyphicon glyphicon-link"></span>
 </a></h2>
-<p>Copyright (c) 2014 Arlo Belshee</p>
-<p>This work is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License"> Creative Commons Attribution 4.0 International License</a>. All source code is licensed under the <a href="LICENSE-MIT">MIT license</a>.</p>
+<p>Copyright &copy; 2015 Innovating Teams</p>
+<p>This readme is licensed under a <a href="http://creativecommons.org/licenses/by/4.0/"><img src="https://i.creativecommons.org/l/by/4.0/88x31.png" alt="Creative Commons License"> Creative Commons Attribution 4.0 International License</a>. Website build and display source code (excluding content or any tools or applications published to this site under separate license) is licensed under the <a href="https://spdx.org/licenses/MIT#licenseText">MIT license</a>. Each page of the website is licensed separately; see the footer of each page for its licensing information.</p>
 <hr>
-<p>Project created by <a href="https://github.com/arlobelshee">Arlo Belshee</a>.</p>
+<p>Project created by <a href="https://github.com/InnovatingTeams">Innovating Teams</a>.</p>
 
 
 		</div>
@@ -216,7 +221,7 @@ git push gh_pages</code></pre>
 				Made with <a href="https://github.com/assemble/assemble" target="_blank">Assemble</a>. The <a href="https://github.com/InnovatingTeams/InnovatingTeams.github.io" target="_blank">Innovating Teams</a> website was created by <a href="https://twitter.com/InnovatingTeams" target="_blank">InnovatingTeams</a>.
 			</p>
 			<p>
-				This page Copyright &copy; 2015 Innovating Teams. Source code for building and running the site, not including content, is released under the <a href="https://spdx.org/licenses/MIT#licenseText" target="_blank">MIT</a> license. Content of this page is released under the <a href="http://creativecommons.org/licenses/by/3.0/">CC-BY-3.0</a>. Each page on this site is licensed separately. Please check the footer for licensing requirements if you wish to reuse.
+				This page Copyright &copy; 2015 Innovating Teams. Source code for building and running the site, not including content, is released under the <a href="https://spdx.org/licenses/MIT#licenseText" target="_blank">MIT</a> license. Content of this page is released under the <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>. Each page on this site is licensed separately. Please check the footer for licensing requirements if you wish to reuse.
 			</p>
 			<ul class="footer-links">
 				<li>Currently v0.1.1</li>
