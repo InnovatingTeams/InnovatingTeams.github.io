@@ -11,7 +11,7 @@
 </title>
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="assets/css/site.css">
+<link rel="stylesheet" href="assets/css/site.0.2.3-20150305175628.css">
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
 
 <!--[if lt IE 9]>
@@ -94,7 +94,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 	<div class="container bs-docs-container" id="content">
 		<div class="wordcount">
 			<div class="wordcount-display">
-				<span class="label-wordcount" data-wordcount="774">774&nbsp;words</span>,
+				<span class="label-wordcount" data-wordcount="874">874&nbsp;words</span>,
 				<span class="label-reading-time" data-reading-time="3 min">3 min&nbsp;to read</span>
 			</div>
 			
@@ -137,7 +137,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </a></h3>
 <p><a href="https://help.github.com/articles/fork-a-repo">Fork our project</a> on GitHub and clone it locally. Now you can freely change the site however you want and share it back when you are done.</p>
 <p>We work in branches. This makes it easy for people to work on multiple things at once. That&#39;s critical because some changes will spawn long discussions. We don&#39;t want to block some of your work on a long discussion about an unrelated topic. So create one branch for each improvement you make.</p>
-<p>Always create your branch off of the <code>src</code> branch. That is the default branch; it&#39;s where all the source lives. Periodically fetch any changes to <code>src</code> and rebase your branch on top of them.</p>
+<p>Always create your branch off of the <code>src</code> branch. That is the default branch; it&#39;s where all the source lives. Periodically fetch any changes to <code>src</code> and merge them. There is automation for this:</p>
+<pre><code>grunt integrate</code></pre>
 <h3 class="docs-heading">How to: building the site<a href="#how-to-building-the-site" name="how-to-building-the-site" class="anchor">
   <span class="anchor-target" id="how-to-building-the-site"></span>
   <span class="glyphicon glyphicon-link"></span>
@@ -174,6 +175,24 @@ git remote add upstream https://github.com/InnovatingTeams/InnovatingTeams.githu
 <p>Once you have the site looking like you want, push your branch up to github and send us a pull request.</p>
 <p>You will get to provide a description of what you are changing and why. Please include a link to the issue related to your pull request. This makes it a lot easier for the community to track the conversation.</p>
 <p>The community will drop by once you have submitted your pull request. We&#39;ll hold a discussion on your request&#39;s page and on its issue&mdash;as we explore both your solution and the original problem. It is very likely that we&#39;ll ask for changes or even fork your fork and send you pull requests. Once everyone agrees about the contribution, we&#39;ll pull it into the main project. It will show up on the live site soon thereafter.</p>
+<h3 class="docs-heading">How to: ship to live<a href="#how-to-ship-to-live" name="how-to-ship-to-live" class="anchor">
+  <span class="anchor-target" id="how-to-ship-to-live"></span>
+  <span class="glyphicon glyphicon-link"></span>
+</a></h3>
+<p>First, you need to be in the owners group for the production repository. If you want access, ask Innovating Teams.</p>
+<p>Next, do the one-time setup described above for seeing your changes.</p>
+<p>Then:</p>
+<ol>
+<li><p>Get all the latest from the main repo and build it locally.</p>
+<pre><code> grunt ship-prep</code></pre>
+</li>
+<li><p>Look at the site. Make sure it is what we want to ship.</p>
+</li>
+<li>Update the version number in <code>package.json</code> based on the amount of change in the site. Use semantic versioning rules to decide the new version.</li>
+<li><p>Perform the ship to live using the automation.</p>
+<pre><code> grunt ship-go</code></pre>
+</li>
+</ol>
 <h2 class="docs-heading">License<a href="#license" name="license" class="anchor">
   <span class="anchor-target" id="license"></span>
   <span class="glyphicon glyphicon-link"></span>
@@ -209,7 +228,7 @@ git remote add upstream https://github.com/InnovatingTeams/InnovatingTeams.githu
 				This page Copyright &copy; 2015 Innovating Teams. Source code for building and running the site, not including content, is released under the <a href="https://spdx.org/licenses/MIT#licenseText" target="_blank">MIT</a> license. Content of this page is released under the <a href="http://creativecommons.org/licenses/by/4.0/">CC-BY-4.0</a>. Each page on this site is licensed separately. Please check the footer for licensing requirements if you wish to reuse.
 			</p>
 			<ul class="footer-links">
-				<li>Currently v0.2.1</li>
+				<li>Currently v0.2.3</li>
 				<li class="muted">&middot;</li>
 				<!--      <li><a href="http://www.InnovatingTeams.com//blog/">Blog</a></li>
 		<li class="muted">&middot;</li> -->
