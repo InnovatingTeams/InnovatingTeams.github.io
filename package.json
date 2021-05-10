@@ -68,7 +68,7 @@
 		"handlebars-helper-twitter": "~0.1.2",
 		"jshint-stylish": ">=0.1.5",
 		"load-grunt-tasks": ">=0.3.0",
-		"lodash": "~4.17.13",
+		"lodash": "~4.17.21",
 		"pretty": "~1.0.0",
 		"showup": "~0.1.2",
 		"time-grunt": ">=0.2.8"
